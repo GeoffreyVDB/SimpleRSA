@@ -12,12 +12,8 @@ e = 53
 
 def generatePrimes(n):
     sqrtN = int(math.floor(math.sqrt(n)))
-    while 1:
-        result = n % sqrtN
-        if result == 0:
-            break
-        else:
-            sqrtN -= 2
+    while n % sqrtN:
+        sqrtN -= 2
     p = sqrtN
     q = n / p
     return p, q
